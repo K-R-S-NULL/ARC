@@ -17,7 +17,8 @@ def clickMethod():
     serial1.write(bytes(command.encode()))
     time.sleep(4)
     notdone = True
-    while(line == ""):
+    line = ""
+    while(line==""):
         if(serial1.in_waiting > 0):
             line = serial1.readline().decode('utf-8').rstrip()
         if(line.endswith(";")):

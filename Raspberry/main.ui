@@ -44,16 +44,282 @@
       <property name="currentIndex">
        <number>1</number>
       </property>
-      <widget class="QWidget" name="tab_3">
+      <widget class="QWidget" name="horizontalWidget">
        <attribute name="title">
         <string>Main</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="verticalGroupBox">
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QToolBox" name="formToolBox">
+             <widget class="QWidget" name="formToolBoxPage1">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>343</width>
+                <height>298</height>
+               </rect>
+              </property>
+              <attribute name="label">
+               <string>Config</string>
+              </attribute>
+              <layout class="QFormLayout" name="formLayout">
+               <property name="horizontalSpacing">
+                <number>0</number>
+               </property>
+               <property name="verticalSpacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="verticalGroupBox">
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QWidget" name="gridWidget" native="true">
+             <layout class="QGridLayout" name="gridLayout">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="horizontalSpacing">
+               <number>12</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>0</number>
+              </property>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>LE</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QPushButton" name="pushButton_15">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>DO/RI</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pushButton_8">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>UP</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="pushButton_10">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>RI</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pushButton_14">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>DO/LE</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="pushButton_13">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>DOWN</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_5">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>UP/LE</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_11">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>99</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>UP/RI</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="verticalGroupBox">
+          <property name="title">
+           <string>Debug Log:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QListWidget" name="main_debug_listWidget"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="horizontalWidget">
        <attribute name="title">
         <string>Move</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="currentIndex">
@@ -64,27 +330,72 @@
             <string>Straight</string>
            </attribute>
            <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QToolBox" name="toolBox">
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="verticalWidget">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>193</height>
+                 <width>315</width>
+                 <height>229</height>
                 </rect>
                </property>
                <attribute name="label">
                 <string>X-Y-Offset (mm)</string>
                </attribute>
                <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>6</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>6</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
                 <item>
                  <widget class="QWidget" name="horizontalWidget" native="true">
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
                    <item>
                     <widget class="QLabel" name="label">
                      <property name="maximumSize">
@@ -99,12 +410,21 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QDoubleSpinBox" name="pat_str_offset_x_doubleSpinBox">
+                    <widget class="QDoubleSpinBox" name="mov_str_offset_x_doubleSpinBox">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
                        <height>50</height>
                       </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="decimals">
+                      <number>3</number>
                      </property>
                      <property name="minimum">
                       <double>-10000000000.000000000000000</double>
@@ -123,6 +443,21 @@
                 <item>
                  <widget class="QWidget" name="horizontalWidget_2" native="true">
                   <layout class="QHBoxLayout" name="horizontalLayout_4">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
                    <item>
                     <widget class="QLabel" name="label_2">
                      <property name="maximumSize">
@@ -137,12 +472,21 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="QDoubleSpinBox" name="pat_str_offset_y_doubleSpinBox">
+                    <widget class="QDoubleSpinBox" name="mov_str_offset_y_doubleSpinBox">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
                        <height>50</height>
                       </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="decimals">
+                      <number>3</number>
                      </property>
                      <property name="minimum">
                       <double>-10000000000.000000000000000</double>
@@ -159,7 +503,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pat_str_offset_pushButton">
+                 <widget class="QPushButton" name="mov_str_offset_pushButton">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -178,14 +522,272 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>282</width>
-                 <height>193</height>
+                 <width>315</width>
+                 <height>229</height>
                 </rect>
                </property>
                <attribute name="label">
                 <string>Angle-Length</string>
                </attribute>
-               <layout class="QVBoxLayout" name="verticalLayout_5"/>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>6</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>6</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>6</number>
+                </property>
+                <item>
+                 <widget class="QWidget" name="horizontalWidget_2" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_8">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="label_3">
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Angle:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="decimals">
+                      <number>5</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-360.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>360.000000000000000</double>
+                     </property>
+                     <property name="singleStep">
+                      <double>15.000000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="horizontalWidget" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_7">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="label_8">
+                     <property name="maximumSize">
+                      <size>
+                       <width>100</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Length:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="decimals">
+                      <number>5</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-999999.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>999999.000000000000000</double>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="horizontalWidget" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_9">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Monospace</family>
+                       <pointsize>16</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>X:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_4">
+                     <property name="font">
+                      <font>
+                       <family>Monospace</family>
+                       <pointsize>16</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="horizontalWidget_2" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QLabel" name="label_7">
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Monospace</family>
+                       <pointsize>16</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Y:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_6">
+                     <property name="font">
+                      <font>
+                       <family>Monospace</family>
+                       <pointsize>16</pointsize>
+                       <weight>50</weight>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="horizontalWidget_x4" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout_6">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QPushButton" name="pushButton">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Add</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+               <zorder>horizontalWidget</zorder>
+               <zorder>horizontalWidget_x4</zorder>
+               <zorder>horizontalWidget_2</zorder>
+               <zorder>horizontalWidget_2</zorder>
+               <zorder>horizontalWidget</zorder>
               </widget>
              </widget>
             </item>
@@ -195,13 +797,42 @@
            <attribute name="title">
             <string>Arc</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_3"/>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="leftMargin">
+             <number>6</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>6</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+           </layout>
           </widget>
           <widget class="QWidget" name="verticalWidget">
            <attribute name="title">
-            <string>Beziere</string>
+            <string>Bézier</string>
            </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_3"/>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>6</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>6</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+           </layout>
           </widget>
          </widget>
         </item>
@@ -224,7 +855,7 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QListWidget" name="pat_actions_listWidget"/>
+            <widget class="QListWidget" name="mov_actions_listWidget"/>
            </item>
            <item>
             <widget class="QWidget" name="horizontalWidget" native="true">
@@ -245,7 +876,7 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QPushButton" name="pat_actions_up_pushButton">
+               <widget class="QPushButton" name="mov_actions_up_pushButton">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -258,7 +889,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pat_actions_down_pushButton">
+               <widget class="QPushButton" name="mov_actions_down_pushButton">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -271,7 +902,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pat_actions_remove_pushButton">
+               <widget class="QPushButton" name="mov_actions_remove_pushButton">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -284,7 +915,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pat_actions_go_pushButton">
+               <widget class="QPushButton" name="mov_actions_go_pushButton">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -321,10 +952,10 @@
             <number>0</number>
            </property>
            <item>
-            <widget class="QGraphicsView" name="pat_actions_preview_graphicsView"/>
+            <widget class="QGraphicsView" name="mov_actions_preview_graphicsView"/>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton">
+            <widget class="QPushButton" name="mov_actions_storePattern_pushButton">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -354,30 +985,31 @@
      </widget>
     </item>
     <item>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="master_com_log_tableWidget">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>99</height>
+       </size>
+      </property>
+      <property name="autoScrollMargin">
+       <number>5</number>
+      </property>
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="dragDropMode">
+       <enum>QAbstractItemView::NoDragDrop</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
       <property name="textElideMode">
        <enum>Qt::ElideRight</enum>
       </property>
       <property name="columnCount">
        <number>6</number>
       </property>
-      <row>
-       <property name="text">
-        <string>#00001</string>
-       </property>
-       <property name="background">
-        <color>
-         <red>243</red>
-         <green>243</green>
-         <blue>243</blue>
-        </color>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>#00002</string>
-       </property>
-      </row>
       <column>
        <property name="text">
         <string>Time</string>
@@ -385,7 +1017,7 @@
       </column>
       <column>
        <property name="text">
-        <string>RSV</string>
+        <string>RCV</string>
        </property>
       </column>
       <column>
@@ -395,7 +1027,7 @@
       </column>
       <column>
        <property name="text">
-        <string>RCV</string>
+        <string>ACK</string>
        </property>
       </column>
       <column>
@@ -408,66 +1040,6 @@
         <string>STATUS</string>
        </property>
       </column>
-      <item row="0" column="0">
-       <property name="text">
-        <string>23:59:59</string>
-       </property>
-      </item>
-      <item row="0" column="1">
-       <property name="text">
-        <string>XYZ</string>
-       </property>
-      </item>
-      <item row="0" column="2">
-       <property name="text">
-        <string>G00;X10000;Y-250000;</string>
-       </property>
-      </item>
-      <item row="0" column="3">
-       <property name="text">
-        <string>OK</string>
-       </property>
-      </item>
-      <item row="0" column="4">
-       <property name="text">
-        <string>X:15000;Y:-5000;</string>
-       </property>
-      </item>
-      <item row="0" column="5">
-       <property name="text">
-        <string>OK</string>
-       </property>
-      </item>
-      <item row="1" column="0">
-       <property name="text">
-        <string>00:00:10</string>
-       </property>
-      </item>
-      <item row="1" column="1">
-       <property name="text">
-        <string>MIL</string>
-       </property>
-      </item>
-      <item row="1" column="2">
-       <property name="text">
-        <string>S15000;</string>
-       </property>
-      </item>
-      <item row="1" column="3">
-       <property name="text">
-        <string>OK</string>
-       </property>
-      </item>
-      <item row="1" column="4">
-       <property name="text">
-        <string/>
-       </property>
-      </item>
-      <item row="1" column="5">
-       <property name="text">
-        <string>IDL</string>
-       </property>
-      </item>
      </widget>
     </item>
    </layout>

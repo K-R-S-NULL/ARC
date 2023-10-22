@@ -1,0 +1,3 @@
+void ErrorReaction(String msg){
+    //
+}

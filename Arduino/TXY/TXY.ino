@@ -28,17 +28,15 @@ void setup() {
 }
 
 void loop() {
-
   if (Serial.available() > 0) {
     String msg = Serial.readStringUntil('\n');
-    //
-    if (msg.startsWith("G")) {
-      GCodeReaction(msg);
-      digitalWrite(LED_BUILTIN, HIGH);
+    if (msg.startsWith("ERR")){
+      msg.remove(0, 3);
+      ErrorReaction(msg);
     }
-    if (msg.startsWith("D")) {
-      Serial.println("LED-LOW");
-      digitalWrite(LED_BUILTIN, LOW);
+    if (msg.startsWith("TXY")){
+      msg.remove(0, 3);
+      GCodeReaction(msg);
     }
   }
 }
