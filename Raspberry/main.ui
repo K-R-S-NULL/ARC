@@ -22,10 +22,13 @@
   <property name="windowTitle">
    <string>arc</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
+  <widget class="QWidget" name="master_centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
-     <widget class="QTabWidget" name="tabWidget">
+     <widget class="QTabWidget" name="master_tabWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>0</horstretch>
@@ -44,7 +47,10 @@
       <property name="currentIndex">
        <number>1</number>
       </property>
-      <widget class="QWidget" name="horizontalWidget">
+      <widget class="QWidget" name="master_tab_main_horizontalWidget">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <attribute name="title">
         <string>Main</string>
        </attribute>
@@ -90,7 +96,7 @@
                 <x>0</x>
                 <y>0</y>
                 <width>343</width>
-                <height>298</height>
+                <height>307</height>
                </rect>
               </property>
               <attribute name="label">
@@ -300,7 +306,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="horizontalWidget">
+      <widget class="QWidget" name="master_tab_mov_horizontalWidget">
        <attribute name="title">
         <string>Move</string>
        </attribute>
@@ -321,11 +327,11 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="QTabWidget" name="tabWidget_2">
+         <widget class="QTabWidget" name="mov_tabWidget">
           <property name="currentIndex">
            <number>0</number>
           </property>
-          <widget class="QWidget" name="verticalWidget">
+          <widget class="QWidget" name="mov_tab_straight_verticalWidget">
            <attribute name="title">
             <string>Straight</string>
            </attribute>
@@ -346,11 +352,11 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QToolBox" name="toolBox">
+             <widget class="QToolBox" name="mov_str_toolBox">
               <property name="currentIndex">
                <number>1</number>
               </property>
-              <widget class="QWidget" name="verticalWidget">
+              <widget class="QWidget" name="mov_str_offset_verticalWidget">
                <property name="geometry">
                 <rect>
                  <x>0</x>
@@ -379,7 +385,7 @@
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QWidget" name="horizontalWidget" native="true">
+                 <widget class="QWidget" name="mov_str_offset_x_horizontalWidget" native="true">
                   <layout class="QHBoxLayout" name="horizontalLayout_3">
                    <property name="spacing">
                     <number>0</number>
@@ -397,7 +403,7 @@
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="label">
+                    <widget class="QLabel" name="mov_str_offset_x_label">
                      <property name="maximumSize">
                       <size>
                        <width>25</width>
@@ -441,7 +447,7 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="horizontalWidget_2" native="true">
+                 <widget class="QWidget" name="mov_str_offset_y_horizontalWidget" native="true">
                   <layout class="QHBoxLayout" name="horizontalLayout_4">
                    <property name="spacing">
                     <number>0</number>
@@ -459,7 +465,7 @@
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QLabel" name="label_2">
+                    <widget class="QLabel" name="mov_str_offset_y_label">
                      <property name="maximumSize">
                       <size>
                        <width>25</width>
@@ -517,13 +523,13 @@
                 </item>
                </layout>
               </widget>
-              <widget class="QWidget" name="verticalWidget">
+              <widget class="QWidget" name="mov_str_angle_verticalWidget">
                <property name="geometry">
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>315</width>
-                 <height>229</height>
+                 <width>301</width>
+                 <height>242</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -793,7 +799,7 @@
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="verticalWidget">
+          <widget class="QWidget" name="mov_tab_arc_verticalWidget">
            <attribute name="title">
             <string>Arc</string>
            </attribute>
@@ -812,7 +818,7 @@
             </property>
            </layout>
           </widget>
-          <widget class="QWidget" name="verticalWidget">
+          <widget class="QWidget" name="mov_tab_bezier_verticalWidget">
            <attribute name="title">
             <string>Bézier</string>
            </attribute>
@@ -837,7 +843,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QGroupBox" name="verticalGroupBox">
+         <widget class="QGroupBox" name="mov_actions_verticalGroupBox">
           <layout class="QVBoxLayout" name="verticalLayout">
            <property name="spacing">
             <number>0</number>
@@ -934,7 +940,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QGroupBox" name="verticalGroupBox_2">
+         <widget class="QGroupBox" name="mov_actions_preview_verticalGroupBox">
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <property name="spacing">
             <number>0</number>
@@ -972,15 +978,23 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="master_tab_pattern_horizontalWidget">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <attribute name="title">
         <string>Pattern</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_11"/>
       </widget>
-      <widget class="QWidget" name="tab_2">
+      <widget class="QWidget" name="master_tab_gcode_horizontalWidget">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
        <attribute name="title">
         <string>G-Code</string>
        </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_12"/>
       </widget>
      </widget>
     </item>

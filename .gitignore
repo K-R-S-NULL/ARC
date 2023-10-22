@@ -1,7 +1,4 @@
 /.vscode/ftp-sync.json
-Raspberry/RaspberryARC.cflags
-Raspberry/RaspberryARC.config
-Raspberry/RaspberryARC.creator
-Raspberry/RaspberryARC.cxxflags
-Raspberry/RaspberryARC.files
-Raspberry/RaspberryARC.includes
+__pycache__
+main.pyproject
+main.pyproject.*
