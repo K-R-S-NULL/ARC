@@ -3,7 +3,7 @@ from arc_cmd.arduino_interface.ard_cmd import arduino_command
 class arduino_mill_command(arduino_command):
     def __init__(self) -> None:
         super().__init__()
-        ident = "MIL"
+        self.ident = "MIL"
         pass
     def get_ident(self) -> str:
         return str(self.ident)

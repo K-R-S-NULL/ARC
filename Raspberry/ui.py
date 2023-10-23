@@ -2,8 +2,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-import i_arduino
-
 import arc_controller
 from arc_cmd.arc_cmd import *
 from arc_cmd.arc_cmd_move import *
@@ -21,32 +19,40 @@ class mainWindow(QMainWindow):
         pass
 
     def movements_preview_update(self):
+        self.controller.build_svg()
         #self.mov_actions_preview_graphicsView
         pass
     
     def movements_actions_list_add(self, command:arc_cmd):
-        self.controller.add_command(command)
+        self.controller.arc_cmd_list_add(command)
         rtnD = QListWidgetItem(self.mov_actions_listWidget)
         rtnD.setText(command.get_representation_list_item())
+        self.movements_preview_update()
         pass
 
     def btn_act_movements_action_list_move_up(self):
         currentRow = self.mov_actions_listWidget.currentRow()
+        self.controller.arc_cmd_list_moveUp(currentRow)
         currentItem = self.mov_actions_listWidget.takeItem(currentRow)
         self.mov_actions_listWidget.insertItem(currentRow - 1, currentItem)
         self.mov_actions_listWidget.setCurrentItem(currentItem)
+        self.movements_preview_update()
         pass
 
     def btn_act_movements_action_list_move_down(self):
         currentRow = self.mov_actions_listWidget.currentRow()
+        self.controller.arc_cmd_list_moveDown(currentRow)
         currentItem = self.mov_actions_listWidget.takeItem(currentRow)
         self.mov_actions_listWidget.insertItem(currentRow + 1, currentItem)
         self.mov_actions_listWidget.setCurrentItem(currentItem)
+        self.movements_preview_update()
         pass
 
     def btn_act_movements_action_list_remove(self):
         currentRow = self.mov_actions_listWidget.currentRow()
-        currentItem = self.mov_actions_listWidget.takeItem(currentRow)
+        self.controller.arc_cmd_list_delete(currentRow)
+        self.mov_actions_listWidget.takeItem(currentRow)
+        self.movements_preview_update()
         pass
 
     def btn_act_movements_action_list_execute(self):
@@ -60,7 +66,7 @@ class mainWindow(QMainWindow):
     def btn_act_movements_straight_xy(self):
         x = self.mov_str_offset_x_doubleSpinBox.value()
         y = self.mov_str_offset_y_doubleSpinBox.value()
-        command = arc_cmd_move_str_offset()
+        command = arc_cmd_move_str_offset_xy()
         command.setOffset(int(x*1000),int(y*1000))
         self.movements_actions_list_add(command)
 

@@ -3,10 +3,10 @@ from arc_cmd.arduino_interface.ard_cmd import arduino_command
 class arduino_xy_command(arduino_command):
     def __init__(self) -> None:
         super().__init__()
-        ident = "TXY"
+        self.ident = "TXY"
         pass
     def get_ident(self) -> str:
-        return str(self.ident)
+        return self.ident
 #command to trigger an initialisation
 class arduino_xy_init(arduino_xy_command):
     def __init__(self) -> None:

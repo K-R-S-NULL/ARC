@@ -3,9 +3,9 @@ from arc_cmd.arduino_interface.ard_cmd import arduino_command
 class arduino_error(arduino_command):
     def __init__(self) -> None:
         super().__init__()
-        ident = "ERR"
-        code = "00"
-        message = "basic"
+        self.ident = "ERR"
+        self.code = "00"
+        self.message = "basic"
         pass
     def get_ident(self) -> str:
         return str(self.ident)
