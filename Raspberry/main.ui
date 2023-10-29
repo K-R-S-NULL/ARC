@@ -961,6 +961,19 @@
             <widget class="QGraphicsView" name="mov_actions_preview_graphicsView"/>
            </item>
            <item>
+            <widget class="QSlider" name="horizontalSlider">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>30</height>
+              </size>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QPushButton" name="mov_actions_storePattern_pushButton">
              <property name="minimumSize">
               <size>

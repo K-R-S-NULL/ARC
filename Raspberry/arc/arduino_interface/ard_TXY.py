@@ -1,5 +1,4 @@
-from arc_cmd.arduino_interface.ard_cmd import arduino_command
-
+from arc.arduino_interface.ard_cmd import arduino_command
 class arduino_xy_command(arduino_command):
     def __init__(self) -> None:
         super().__init__()
@@ -16,8 +15,8 @@ class arduino_xy_init(arduino_xy_command):
 class arduino_xy_rapidMove(arduino_xy_command):
     def __init__(self) -> None:
         super().__init__()
-        x = int(0)
-        y = int(0)
+        self.x = int(0)
+        self.y = int(0)
         pass
     def setattr(self, x:int , y:int) -> None:
         self.x = x
@@ -29,9 +28,9 @@ class arduino_xy_rapidMove(arduino_xy_command):
 class arduino_xy_straightMove(arduino_xy_command):
     def __init__(self) -> None:
         super().__init__()
-        x = int(0)
-        y = int(0)
-        speed = float(0.0)
+        self.x = int(0)
+        self.y = int(0)
+        self.speed = float(0.0)
     def setattr(self, x:int, y:int, speed:float) -> None:
         self.x = x
         self.y = y

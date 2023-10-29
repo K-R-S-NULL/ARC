@@ -1,4 +1,4 @@
-from arc_cmd.arduino_interface.ard_cmd import arduino_command
+from arc.arduino_interface.ard_cmd import arduino_command
 
 class arduino_mill_command(arduino_command):
     def __init__(self) -> None:

@@ -1,10 +1,13 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
+from PyQt5 import QtGui
+from PyQt5.QtGui import QPixmap
+
+from arc.arc_cmd_move import arc_cmd_move_str_offset_xy
+from arc.arc_commander import arc_cmd
 
 import arc_controller
-from arc_cmd.arc_cmd import *
-from arc_cmd.arc_cmd_move import *
 
 class mainWindow(QMainWindow):
     def __init__(self):
@@ -14,13 +17,17 @@ class mainWindow(QMainWindow):
         self.pattern_actions_list = []
         self.init_model()
         self.init_view()
-
         self.show()
         pass
 
     def movements_preview_update(self):
-        self.controller.build_svg()
-        #self.mov_actions_preview_graphicsView
+        image = QtGui.QImage.fromData(self.controller.get_svg_representation().encode())
+        scene = QGraphicsScene()
+        self.mov_actions_preview_graphicsView.setScene(scene)
+        pic = QGraphicsPixmapItem()
+        pic.setPixmap(QPixmap.fromImage(image))
+        scene.setSceneRect(0, 0, 400, 400)
+        scene.addItem(pic)
         pass
     
     def movements_actions_list_add(self, command:arc_cmd):
