@@ -88,7 +88,11 @@ class arc_svg():
         self.svg = self.root.createElement('svg')
         self.svg.setAttribute('width', '400') #str(self.svg_dimension_x * self.scaling_factor))
         self.svg.setAttribute('height', '400') #str(self.svg_dimension_y * self.scaling_factor))
-        self.svg.setAttribute('viewBox',str(self.min_box_x * self.scaling_factor)+' '+str(self.min_box_y * self.scaling_factor) + ' '+str(self.max_abs_dim_x * self.scaling_factor)+' '+str(self.max_abs_dim_y * self.scaling_factor))
+        tmpx = self.min_box_x
+        if self.min_box_x < 0 : tmpx = self.min_box_x * -1
+        tmpy = self.min_box_y
+        if self.min_box_y < 0 : tmpy = self.min_box_y * -1
+        self.svg.setAttribute('viewBox',str(self.min_box_x * self.scaling_factor)+' '+str(self.min_box_y * self.scaling_factor) + ' '+str((self.max_abs_dim_x+tmpx) * self.scaling_factor)+' '+str((self.max_abs_dim_y+tmpy )* self.scaling_factor))
         self.svg.setAttribute('preserveAspectRatio','xMaxYMin meet')
         self.svg.setAttribute('xmlns','http://www.w3.org/2000/svg')
         self.svg.setAttribute('xmlns:xlink','http://www.w3.org/1999/xlink')
