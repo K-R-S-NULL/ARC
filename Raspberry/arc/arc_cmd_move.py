@@ -31,11 +31,12 @@ class arc_cmd_move_str_offset_xy(arc_cmd_move):
     def get_representation_list_item(self) -> str:
         return self.arduino_cmd[0].get_ident() + ";" + self.arduino_cmd[0].get_Command()
     def get_representation_svg_part(self, start_x :int, start_y:int) -> arc_svg_element:
-        #group = arc_svg_group()
+        group = arc_svg_group()
+        group.set_id('G00')
         line = arc_svg_line()
         line.setAttrbutes(start_x,start_y,self.end_x,self.end_y)
-        #group.append(line)
-        return line #group
+        group.append(line)
+        return group
     def get_offset_x(self) -> int:
         return self.end_x
     def get_offset_y(self) -> int:

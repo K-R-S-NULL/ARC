@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 from PyQt5 import QtGui
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QPainter, QTransform
 
 from arc.arc_cmd_move import arc_cmd_move_str_offset_xy
 from arc.arc_commander import arc_cmd
@@ -21,13 +21,19 @@ class mainWindow(QMainWindow):
         pass
 
     def movements_preview_update(self):
-        image = QtGui.QImage.fromData(self.controller.get_svg_representation().encode())
+        image = QtGui.QImage.fromData(self.controller.get_svg_representation().encode())#.scaled(400,400,Qt.KeepAspectRatio)
         scene = QGraphicsScene()
         self.mov_actions_preview_graphicsView.setScene(scene)
-        pic = QGraphicsPixmapItem()
+        pic = QGraphicsPixmapItem()#transpose(method=Image.FLIP_TOP_BOTTOM)
         pic.setPixmap(QPixmap.fromImage(image))
         scene.setSceneRect(0, 0, 400, 400)
         scene.addItem(pic)
+        '''paint = QPainter()
+        paint.
+        paint.scale(400,400)
+        scene.render(paint)
+        
+        '''
         pass
     
     def movements_actions_list_add(self, command:arc_cmd):
