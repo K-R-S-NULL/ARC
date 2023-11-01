@@ -27,3 +27,5 @@ class arc_control():
         svg = arc_svg_builder()
         svg.set_cmd_list(self.cmd_list)
         return svg.getString()
+    def test(self) -> None:
+        print('testtest')

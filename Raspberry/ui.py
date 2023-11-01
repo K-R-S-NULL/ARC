@@ -4,7 +4,7 @@ from PyQt5 import uic
 from PyQt5 import QtGui
 from PyQt5.QtGui import QPixmap, QPainter, QTransform
 
-from arc.arc_cmd_move import arc_cmd_move_str_offset_xy
+from arc.arc_cmd_move import arc_cmd_move_str_offset_xy, default_test_circle
 from arc.arc_commander import arc_cmd
 
 import arc_controller
@@ -82,6 +82,12 @@ class mainWindow(QMainWindow):
         command = arc_cmd_move_str_offset_xy()
         command.setOffset(int(x*1000),int(y*1000))
         self.movements_actions_list_add(command)
+    
+    def btn_act_movements_test(self):
+        self.controller.test()
+        circle = default_test_circle()
+        self.movements_actions_list_add(circle)
+        pass
 
     def init_listeners(self):
         print("initializing listeners")
@@ -92,6 +98,7 @@ class mainWindow(QMainWindow):
         self.mov_actions_up_pushButton.clicked.connect(self.btn_act_movements_action_list_move_up)
         self.mov_actions_go_pushButton.clicked.connect(self.btn_act_movements_action_list_execute)
         self.mov_actions_remove_pushButton.clicked.connect(self.btn_act_movements_action_list_remove)
+        self.mov_tab_test_pushButton.clicked.connect(self.btn_act_movements_test)
         #mov_actions_preview_graphicsView
         #Patttern
         #GCode

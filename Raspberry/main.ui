@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>600</height>
+    <width>1132</width>
+    <height>679</height>
    </rect>
   </property>
   <property name="font">
@@ -95,8 +95,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>343</width>
-                <height>307</height>
+                <width>397</width>
+                <height>313</height>
                </rect>
               </property>
               <attribute name="label">
@@ -329,7 +329,7 @@
         <item>
          <widget class="QTabWidget" name="mov_tabWidget">
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="mov_tab_straight_verticalWidget">
            <attribute name="title">
@@ -361,8 +361,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>315</width>
-                 <height>229</height>
+                 <width>275</width>
+                 <height>150</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -528,8 +528,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>301</width>
-                 <height>242</height>
+                 <width>354</width>
+                 <height>244</height>
                 </rect>
                </property>
                <attribute name="label">
@@ -839,6 +839,24 @@
              <number>0</number>
             </property>
            </layout>
+          </widget>
+          <widget class="QWidget" name="mov_tab_test">
+           <attribute name="title">
+            <string>TEST</string>
+           </attribute>
+           <widget class="QPushButton" name="mov_tab_test_pushButton">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>40</y>
+              <width>271</width>
+              <height>221</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>TEST</string>
+            </property>
+           </widget>
           </widget>
          </widget>
         </item>

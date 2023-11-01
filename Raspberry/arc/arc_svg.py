@@ -38,7 +38,6 @@ class arc_svg_builder():
 class arc_svg_element():
     def __init__(self) -> None:
         self.id = None
-        self.scaling_factor : float = 0.001
         self.start_x   : int = 0
         self.start_y   : int = 0
         self.end_x     : int = 0
@@ -47,7 +46,7 @@ class arc_svg_element():
         self.box_y     : int = 0
         self.box_dim_x : int = 0
         self.box_dim_y : int = 0
-        self.tool_diameter : int = 4
+        self.tool_diameter : int = 1
         self.stroke_color : str = 'blue'
         pass
     def buid_node(self) -> minidom.Element:
@@ -57,7 +56,6 @@ class arc_svg_element():
         pass
 class arc_svg():
     def __init__(self) -> None:
-        self.scaling_factor : float = 0.001
         self.svg_dimension_x : int = 100
         self.svg_dimension_y : int = 100
         self.svg_box_list : List[arc_svg_element] = []
@@ -92,7 +90,7 @@ class arc_svg():
         if self.min_box_x < 0 : tmpx = self.min_box_x * -1
         tmpy = self.min_box_y
         if self.min_box_y < 0 : tmpy = self.min_box_y * -1
-        self.svg.setAttribute('viewBox',str(self.min_box_x * self.scaling_factor)+' '+str(self.min_box_y * self.scaling_factor) + ' '+str((self.max_abs_dim_x+tmpx) * self.scaling_factor)+' '+str((self.max_abs_dim_y+tmpy )* self.scaling_factor))
+        self.svg.setAttribute('viewBox',str(self.min_box_x)+' '+str(self.min_box_y) + ' '+str((self.max_abs_dim_x+tmpx))+' '+str((self.max_abs_dim_y+tmpy )))
         self.svg.setAttribute('preserveAspectRatio','xMaxYMin meet')
         self.svg.setAttribute('xmlns','http://www.w3.org/2000/svg')
         self.svg.setAttribute('xmlns:xlink','http://www.w3.org/1999/xlink')
@@ -178,10 +176,10 @@ class arc_svg_line(arc_svg_element):
         pass
     def buid_my_node(self,root:minidom.Document) -> minidom.Element:
         rtn = root.createElement('line')
-        rtn.setAttribute('x1',str((self.box_x + self.start_x)*self.scaling_factor))
-        rtn.setAttribute('y1',str((self.box_y + self.start_y)*self.scaling_factor))
-        rtn.setAttribute('x2',str((self.box_x + self.end_x)*self.scaling_factor))
-        rtn.setAttribute('y2',str((self.box_y + self.end_y)*self.scaling_factor))
+        rtn.setAttribute('x1',str((self.box_x + self.start_x)))
+        rtn.setAttribute('y1',str((self.box_y + self.start_y)))
+        rtn.setAttribute('x2',str((self.box_x + self.end_x)))
+        rtn.setAttribute('y2',str((self.box_y + self.end_y)))
         rtn.setAttribute('stroke',self.stroke_color)
         rtn.setAttribute('stroke-width',str(self.tool_diameter))
         return rtn
@@ -191,10 +189,10 @@ class arc_svg_rect(arc_svg_element):
         pass
     def buid_my_node(self,root:minidom.Document) -> minidom.Element:
         rtn = root.createElement('rect')
-        rtn.setAttribute('x',str(self.box_x*self.scaling_factor))
-        rtn.setAttribute('y',str(self.box_y*self.scaling_factor))
-        rtn.setAttribute('width', str(self.box_dim_x*self.scaling_factor))
-        rtn.setAttribute('height',str(self.box_dim_y*self.scaling_factor))
+        rtn.setAttribute('x',str(self.box_x))
+        rtn.setAttribute('y',str(self.box_y))
+        rtn.setAttribute('width', str(self.box_dim_x))
+        rtn.setAttribute('height',str(self.box_dim_y))
         style : str = 'fill:blue;'
         style += 'stroke:'+self.stroke_color+';'
         style += 'stroke-width:'+str(self.tool_diameter)+';'

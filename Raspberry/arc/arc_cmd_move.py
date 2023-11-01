@@ -1,4 +1,5 @@
 #from arc.arc_commander import 
+import math
 from arc.arc_commander import arc_cmd
 from arc.arc_svg import arc_svg_element
 from arc.arc_svg import arc_svg_line
@@ -49,3 +50,32 @@ class arc_cmd_move_str_angle(arc_cmd_move):
         pass
     def get_representation_list_item(self) -> arc_svg_element:
         pass
+
+class default_test_circle(arc_cmd_move):
+    def __init__(self) -> None:
+        super().__init__()
+        pass
+    def get_representation_list_item(self) -> str:
+        return 'Test Circle'
+    def get_representation_svg_part(self, start_x :int, start_y:int) -> arc_svg_element:
+        center_x :floar=100.0
+        center_y :floar=100.0
+        radius : float = 100.0
+        
+        group = arc_svg_group()
+        group.set_id('TEST-CIRCLE')
+        last_x : float = center_x + radius * math.sin(0) # sin(0)
+        last_y : float = center_y + radius * math.cos(0) # cos(0)
+        total_steps = 20
+        a=(1/total_steps)*(math.pi*2)
+        print(a)
+        for i in range(1, total_steps+1):
+            total_x : float = center_x + radius * math.sin(a*i)
+            total_y : float = center_y + radius * math.cos(a*i)
+            #print(str(last_x)+ ' '+str(last_y))
+            line = arc_svg_line()
+            line.setAttrbutes(last_x,last_y,total_x-last_x,total_y-last_y)
+            last_x = total_x
+            last_y = total_y
+            group.append(line)
+        return group
