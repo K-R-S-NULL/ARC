@@ -30,7 +30,7 @@ class arc_cmd_move_str_offset_xy(arc_cmd_move):
         self.arduino_cmd.append(arduino_cmd)
         pass
     def get_representation_list_item(self) -> str:
-        return self.arduino_cmd[0].get_ident() + ";" + 'line x:' + str(self.end_x*0.001) + 'mm y:'+ str(self.end_y*0.001) + 'mm'
+        return self.arduino_cmd[0].get_ident() + ";" + 'line x:' + str(self.end_x) + 'mm y:'+ str(self.end_y) + 'mm'
     def get_representation_svg_part(self, start_x :int, start_y:int) -> arc_svg_element:
         group = arc_svg_group()
         group.set_id('G00')
@@ -58,15 +58,21 @@ class default_test_circle(arc_cmd_move):
     def get_representation_list_item(self) -> str:
         return 'Test Circle'
     def get_representation_svg_part(self, start_x :int, start_y:int) -> arc_svg_element:
-        center_x :floar=100.0
-        center_y :floar=100.0
+        self.start_x = start_x
+        self.start_y = start_y
+        arc_len : float = 1.0
         radius : float = 100.0
-        
+        self.end_x = radius
+        self.end_y = 0
+        center_x :float=float(start_x)
+        center_y :float=float(start_y+radius)
+        umfang : float = 2 * radius * math.pi
         group = arc_svg_group()
+        
         group.set_id('TEST-CIRCLE')
         last_x : float = center_x + radius * math.sin(0) # sin(0)
         last_y : float = center_y + radius * math.cos(0) # cos(0)
-        total_steps = 20
+        total_steps = int(umfang/arc_len)
         a=(1/total_steps)*(math.pi*2)
         print(a)
         for i in range(1, total_steps+1):

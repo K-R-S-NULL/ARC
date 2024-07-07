@@ -80,7 +80,7 @@ class mainWindow(QMainWindow):
         x = self.mov_str_offset_x_doubleSpinBox.value()
         y = self.mov_str_offset_y_doubleSpinBox.value()
         command = arc_cmd_move_str_offset_xy()
-        command.setOffset(int(x*1000),int(y*1000))
+        command.setOffset(int(x),int(y))
         self.movements_actions_list_add(command)
     
     def btn_act_movements_test(self):

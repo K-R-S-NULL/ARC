@@ -94,6 +94,7 @@ class arc_svg():
         self.svg.setAttribute('preserveAspectRatio','xMaxYMin meet')
         self.svg.setAttribute('xmlns','http://www.w3.org/2000/svg')
         self.svg.setAttribute('xmlns:xlink','http://www.w3.org/1999/xlink')
+        self.svg.setAttribute('style','background-color:green')
         for box in self.svg_box_list:
             boxplot = arc_svg_element_boxplot()
             boxplot.loadElement(box)
@@ -198,7 +199,8 @@ class arc_svg_rect(arc_svg_element):
         style += 'stroke-width:'+str(self.tool_diameter)+';'
         style += 'fill-opacity:0;'
         style += 'stroke-opacity:0.9'
-        rtn.setAttribute('style',style)
+        rtn.setAttribute('style',
+         )
         return rtn
 class arc_svg_element_boxplot(arc_svg_rect):
     def __init__(self) -> None:

@@ -1,6 +1,6 @@
 from typing import List
 from arc.arduino_interface import ard_cmd
-from arc.arc_svg import arc_svg_element
+from arc.arc_svg import arc_svg_element, arc_svg, arc_svg_builder
 #from arc.arduino_interface import *
 
 class arc_cmd():
@@ -27,6 +27,7 @@ class arc_cmd():
 class arc_cmd_list():
     def __init__(self) -> None:
         self.arc_cmd_list: List[arc_cmd] = []
+        self.svg : arc_svg
         pass
     def add(self, cmd:arc_cmd) -> None:
         self.arc_cmd_list.append(cmd)
