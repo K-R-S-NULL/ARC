@@ -18,11 +18,14 @@ class element():
             print(self.path[i])
 class circle():
     def __init__(self) -> None:
-        self.path : List[basics.vector] = []
-        self.positions : List[basics.vector] = []
         self.arc_len : float = 1.0
         self.center : basics.vector = vector()
         self.radius : float = 1.0
+        #vectors to form a circle
+        self.path : List[basics.vector] = []
+        #absolute position
+        self.positions : List[basics.vector] = []
+        #position in relations to the center of the circle
         self.c_positions : List[basics.vector] = []
         pass
     def calculate(self)->None:
@@ -32,7 +35,7 @@ class circle():
         total_steps : int = int(self.calculate_circumference()/self.arc_len)
         a = (1/total_steps)*(math.pi*2)
         for i in range(0,total_steps+1):
-            pos : basi+ics.vector = vector()
+            pos : basics.vector = vector()
             c_pos : basics.vector = vector()
             c_pos.x = self.radius * math.sin(a*i)
             c_pos.y = self.radius * math.cos(a*i)
