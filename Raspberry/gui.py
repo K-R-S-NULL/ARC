@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QDou
 import sys
 import serial
 import time
-serial1 = serial.Serial('/dev/ttyUSB0',115200, timeout=1.0)
+serial1 = serial.Serial('/dev/ttyUSB1',115200, timeout=1.0)
 time.sleep(3)#arduino bootup time
 serial1.reset_input_buffer()
 
