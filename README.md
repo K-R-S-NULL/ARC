@@ -15,7 +15,7 @@ Raspberry
     
   Todo:
   
-    -add Z Axes to Milling Table
+    -add Z Axes to Milling Table i.e. alter Benchpress from manual to Stepper Controll
 
 
 sudo apt install python3-pyqt5.qtsvg
